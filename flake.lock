@@ -230,6 +230,22 @@
         "type": "github"
       }
     },
+    "nixos-artwork": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1696446040,
+        "narHash": "sha256-468ppSe/b8vq1lndD2V+zDXC2TKkFAd7uRlxKwNsdr4=",
+        "owner": "NixOS",
+        "repo": "nixos-artwork",
+        "rev": "da4697b5621460fe438de0cf2f44c42c926e045d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixos-artwork",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1700204040,
@@ -281,6 +297,7 @@
         "firefox": "firefox",
         "firefox-gnome-theme": "firefox-gnome-theme",
         "home-manager": "home-manager",
+        "nixos-artwork": "nixos-artwork",
         "nixpkgs": "nixpkgs",
         "snowfall-lib": "snowfall-lib",
         "vscode-extensions": "vscode-extensions"

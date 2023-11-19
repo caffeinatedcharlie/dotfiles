@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ inputs, pkgs, lib, ... }:
 pkgs.writeTextFile {
   name = "nix-gear-wallpaper";
   destination = "/share/gnome-background-properties/nix-gear.xml";
