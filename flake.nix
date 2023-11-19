@@ -16,6 +16,7 @@
       };
     };
     firefox-gnome-theme = { url = "github:rafaelmardojai/firefox-gnome-theme/nightly"; flake = false; };
+    nixos-artwork = { url = "github:NixOS/nixos-artwork"; flake = false; };
     vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     # jack5079 = {
     # 	url = "github:jack5079/dotfiles";
