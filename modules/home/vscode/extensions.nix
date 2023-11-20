@@ -67,4 +67,5 @@ extensions: with extensions; [
   vscode-icons-team.vscode-icons
   yzhang.markdown-all-in-one
   ziglang.vscode-zig
+  ms-vscode.vscode-typescript-next
 ]
