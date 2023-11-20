@@ -1,15 +1,16 @@
-{ inputs, pkgs, system, lib, ... }: {  
+{ inputs, pkgs, system, lib, ... }: {
   programs = {
     firefox.enable = true;
     bun.enable = true;
     vscode.enable = true;
-     nushell = {
+    nushell = {
       enable = true;
       shellAliases = {
         switch = "sudo nixos-rebuild switch --fast --print-build-logs";
         nx = "nix develop --command hx";
         nv = "nix develop --command code";
         gc = "sudo nix-collect-garbage -d";
+        node-shell = "nix shell nixpkgs#nodePackages_latest.pnpm nixpkgs#nodePackages_latest.nodejs";
       };
       extraConfig = "$env.config.show_banner = false;";
     };
