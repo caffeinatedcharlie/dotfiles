@@ -1,7 +1,7 @@
 { inputs, pkgs, system, lib, ... }: {
   home.packages = [
     pkgs.arrpc
-    pkgs.vesktop
+    pkgs.armcord
     pkgs.komikku
     pkgs.foliate
     pkgs.fragments
