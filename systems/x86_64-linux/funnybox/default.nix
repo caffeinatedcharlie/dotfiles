@@ -9,10 +9,12 @@
     [
       # Include the results of the hardware scan.
       ./hardware.nix
+      # Flatpaks
+      ./flatpak.nix
     ];
-  
+
   security.hardened = true;
-  
+
   home-manager.useUserPackages = true; # "This is necessary if, for example, you wish to use `nixos-rebuild build-vm`" ―https://nix-community.github.io/home-manager/#:~:text=use%20nixos-rebuild-,build-vm,-.%20This%20option%20may
   home-manager.useGlobalPkgs = true;
   # Use the systemd-boot EFI boot loader.
@@ -87,26 +89,6 @@
       monospace = [ "Go Mono" "DejaVu Sans Mono" ];
     };
   };
-  # Custom fonts in Flatpak applications <https://github.com/NixOS/nixpkgs/issues/119433#issuecomment-1326957279>
-  system.fsPackages = [ pkgs.bindfs ];
-  fileSystems =
-    let
-      mkRoSymBind = path: {
-        device = path;
-        fsType = "fuse.bindfs";
-        options = [ "ro" "resolve-symlinks" "x-gvfs-hide" ];
-      };
-      aggregatedFonts = pkgs.buildEnv {
-        name = "system-fonts";
-        paths = config.fonts.packages;
-        pathsToLink = [ "/share/fonts" ];
-      };
-    in
-    {
-      # Create an FHS mount to support flatpak host icons/fonts
-      "/usr/share/icons" = mkRoSymBind (config.system.path + "/share/icons");
-      "/usr/share/fonts" = mkRoSymBind (aggregatedFonts + "/share/fonts");
-    };
   # Configure keymap in X11
   services.xserver.layout = "gb";
   # services.xserver.xkbOptions = "eurosign:e,caps:escape";
@@ -143,7 +125,6 @@
   };
   environment.shells = with pkgs; [ nushell ];
 
-  services.flatpak.enable = true;
   programs.virt-manager.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
