@@ -45,7 +45,7 @@
   };
 
   services.flatpak.packages = [
-    "io.github.MakovWait.Godots"
+    "com.github.tchx84.Flatseal"
     "com.github.micahflee.torbrowser-launcher"
     "org.gnome.design.IconLibrary"
     "org.gnome.design.Emblem"
