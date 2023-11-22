@@ -18,6 +18,7 @@
     firefox-gnome-theme = { url = "github:rafaelmardojai/firefox-gnome-theme/nightly"; flake = false; };
     nixos-artwork = { url = "github:NixOS/nixos-artwork"; flake = false; };
     vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    flatpaks.url = "github:GermanBread/declarative-flatpak/stable";
     # jack5079 = {
     # 	url = "github:jack5079/dotfiles";
     # 	inputs = {
@@ -34,6 +35,9 @@
       namespace = "me";
       package-namespace = "me";
       src = ./.;
+      systems.modules.nixos = with inputs; [
+        flatpaks.nixosModules.default
+      ];
       # homes.modules = with inputs; [
       # 	jack5079.homeModules.bun
       # ];
