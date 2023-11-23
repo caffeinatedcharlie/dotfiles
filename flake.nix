@@ -19,6 +19,7 @@
     nixos-artwork = { url = "github:NixOS/nixos-artwork"; flake = false; };
     vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     flatpaks.url = "github:gmodena/nix-flatpak";
+    nixpkgs-with-inter-v4.url = "github:SharzyL/nixpkgs/inter_4";
     # jack5079 = {
     # 	url = "github:jack5079/dotfiles";
     # 	inputs = {
