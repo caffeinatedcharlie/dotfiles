@@ -10,6 +10,8 @@
       paperwm
       overview-background
       wayland-or-x11
+      desktop-cube
+      burn-my-windows
     ] ++ [
       pkgs.adw-gtk3
       pkgs.gnome.gnome-tweaks
