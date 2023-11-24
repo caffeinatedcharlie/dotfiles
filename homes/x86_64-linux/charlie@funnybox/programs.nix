@@ -3,6 +3,12 @@
     firefox.enable = true;
     bun.enable = true;
     vscode.enable = true;
+    librewolf = {
+      enable = true;
+      settings = {
+        "privacy.resistFingerprinting.letterboxing" = true;
+      };
+    };
     nushell = {
       enable = true;
       shellAliases = {
