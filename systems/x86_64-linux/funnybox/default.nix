@@ -123,6 +123,15 @@
     initialHashedPassword = "$y$j9T$ajJkU9entxo2ivw./lvmN1$xWO8PSHNbhepefmmSsyXKC4mZ3wuucOB1sz7QuQi6pB";
     shell = pkgs.nushell;
   };
+
+  # user (used for testing random stuff hence why it is gitignored (home manager config))
+  users.users.user = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" "networkmanager" "libvirtd" "adbusers" ];
+    initialHashedPassword = "$y$j9T$/ETDcT4LZF.uoLjilNdvR.$1B/uHzpwoI0RvlMwqU4CdjGLNt.QajHDgYY0LInWWlB";
+    shell = pkgs.nushell;
+  };
+
   environment.shells = with pkgs; [ nushell ];
 
   programs.virt-manager.enable = true;
