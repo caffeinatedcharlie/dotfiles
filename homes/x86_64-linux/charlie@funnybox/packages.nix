@@ -2,7 +2,7 @@
   home.packages = [
     pkgs.arrpc
     pkgs.gnupg
-    pkgs.armcord
+    pkgs.vesktop
     pkgs.me.nix-gear-wallpaper
   ];
 }
