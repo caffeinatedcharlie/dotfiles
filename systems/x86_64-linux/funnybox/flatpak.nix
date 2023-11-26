@@ -49,13 +49,12 @@
     "com.github.micahflee.torbrowser-launcher"
     "org.gnome.design.IconLibrary"
     "org.gnome.design.Emblem"
+    "io.gitlab.adhami3310.Impression"
     "de.haeckerfelix.Fragments"
     "com.pojtinger.felicitas.Multiplex"
     "io.mpv.Mpv"
-    "io.gitlab.zehkira.Monophony"
     "io.github.vinegarhq.Vinegar"
     "info.febvre.Komikku"
-    "com.github.johnfactotum.Foliate"
   ];
 }
 
