@@ -7,7 +7,7 @@ in
 {
   options.programs.bun = {
     enable = lib.mkEnableOption "Bun JavaScript runtime";
-    package = lib.mkPackageOption pkgs "bun" {};
+    package = lib.mkPackageOption pkgs "bun" { };
     settings = lib.mkOption {
       type = tomlFormat.type;
       default = { };
