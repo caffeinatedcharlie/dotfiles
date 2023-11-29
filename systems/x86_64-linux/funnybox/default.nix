@@ -122,7 +122,6 @@
     initialHashedPassword = "$y$j9T$ajJkU9entxo2ivw./lvmN1$xWO8PSHNbhepefmmSsyXKC4mZ3wuucOB1sz7QuQi6pB";
     shell = pkgs.nushell;
   };
-
   environment.shells = with pkgs; [ nushell ];
 
   programs.virt-manager.enable = true;
