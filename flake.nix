@@ -20,13 +20,6 @@
     vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     flatpaks.url = "github:gmodena/nix-flatpak";
     nixpkgs-with-inter-v4.url = "github:SharzyL/nixpkgs/inter_4";
-    # jack5079 = {
-    # 	url = "github:jack5079/dotfiles";
-    # 	inputs = {
-    # 		nixpkgs.follows = "nixpkgs";
-    # 		home-manager.follows = "home-manager";
-    # 	};
-    # };
   };
 
   outputs = inputs:
@@ -36,11 +29,8 @@
       namespace = "me";
       package-namespace = "me";
       src = ./.;
-      systems.modules.nixos = with inputs; [
+      systems.hosts.funnybox = with inputs; [
         flatpaks.nixosModules.nix-flatpak
       ];
-      # homes.modules = with inputs; [
-      # 	jack5079.homeModules.bun
-      # ];
     };
 }
