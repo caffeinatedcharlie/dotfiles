@@ -71,15 +71,14 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
   environment.gnome.excludePackages = with pkgs; [
-    gnome-tour # I've used GNOME before
+    gnome-tour
     gnome-photos
     gnome.simple-scan
-    gnome.gnome-maps # I have a desktop
-    # gnome.seahorse
+    gnome.gnome-maps
     gnome.geary
-    gnome.cheese # I do not have a webcam
-    epiphany # Sometimes I uncomment this to test WebKit
-    gnome.gnome-music # I use Amberol instead
+    gnome.cheese
+    epiphany
+    gnome.gnome-music
   ];
   fonts = {
     packages = [ inputs.nixpkgs-with-inter-v4.legacyPackages.${pkgs.system}.inter pkgs.noto-fonts-cjk-sans pkgs.source-sans-pro pkgs.go-font pkgs.monaspace ];
