@@ -5,21 +5,25 @@
       url = "github:snowfallorg/lib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-artwork = { url = "github:NixOS/nixos-artwork"; flake = false; };
+    nixpkgs-with-inter-v4.url = "github:SharzyL/nixpkgs/inter_4";
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
+    # Home Manager
     home-manager = {
       url = "home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Web Experience!
+
+    # Firefox Nightly
     firefox = {
       url = "github:nix-community/flake-firefox-nightly";
       inputs = {
         nixpkgs.follows = "nixpkgs";
       };
     };
-    firefox-gnome-theme = { url = "github:rafaelmardojai/firefox-gnome-theme/nightly"; flake = false; };
-    nixos-artwork = { url = "github:NixOS/nixos-artwork"; flake = false; };
-    vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-    flatpaks.url = "github:gmodena/nix-flatpak";
-    nixpkgs-with-inter-v4.url = "github:SharzyL/nixpkgs/inter_4";
+    firefox-gnome-theme = { url = "github:rafaelmardojai/firefox-gnome-theme/nightly"; flake = false; }; # Firefox Gnome
   };
 
   outputs = inputs:
@@ -29,8 +33,10 @@
       namespace = "me";
       package-namespace = "me";
       src = ./.;
+
+      # Funnybox NixOS system modules
       systems.hosts.funnybox = with inputs; [
-        flatpaks.nixosModules.nix-flatpak
+        nix-flatpak.nixosModules.nix-flatpak
       ];
     };
 }
