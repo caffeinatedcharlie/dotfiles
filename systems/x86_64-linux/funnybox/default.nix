@@ -9,6 +9,8 @@
     [
       # Include the results of the hardware scan.
       ./hardware.nix
+      # Desktop environment
+      ./desktop.nix
       # Flatpaks
       ./flatpak.nix
     ];
@@ -57,37 +59,12 @@
   #   useXkbConfig = true; # use xkbOptions in tty.
   # };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
   # MULLVAD
   services.mullvad-vpn = {
     enable = true;
     package = pkgs.mullvad-vpn;
   };
 
-  environment.sessionVariables.NIXOS_OZONE_WL = "1"; # https://gitlab.freedesktop.org/xorg/xserver/-/issues/1317
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-  environment.gnome.excludePackages = with pkgs; [
-    gnome-tour
-    gnome-photos
-    gnome.simple-scan
-    gnome.gnome-maps
-    gnome.geary
-    gnome.cheese
-    epiphany
-    gnome.gnome-music
-  ];
-  fonts = {
-    packages = [ inputs.nixpkgs-with-inter-v4.legacyPackages.${pkgs.system}.inter pkgs.noto-fonts-cjk-sans pkgs.source-sans-pro pkgs.go-font pkgs.monaspace ];
-    fontDir.enable = true;
-    fontconfig.defaultFonts = {
-      sansSerif = [ "Inter" "Inter Regular" "Cantarell" "DejaVu Sans" ];
-      monospace = [ "Go Mono" "DejaVu Sans Mono" ];
-    };
-  };
   # Configure keymap in X11
   services.xserver.layout = "gb";
   # services.xserver.xkbOptions = "eurosign:e,caps:escape";
