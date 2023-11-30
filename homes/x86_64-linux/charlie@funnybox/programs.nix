@@ -11,7 +11,6 @@
         nx = "nix develop --command hx";
         nv = "nix develop --command code";
         gc = "sudo nix-collect-garbage -d";
-        node-shell = "nix shell nixpkgs#nodePackages_latest.pnpm nixpkgs#nodePackages_latest.nodejs";
       };
       extraConfig = "$env.config.show_banner = false;";
     };
