@@ -3,6 +3,7 @@
     firefox.enable = true;
     bun.enable = true;
     vscode.enable = true;
+    vesktop.enable = true;
     nushell = {
       enable = true;
       shellAliases = {
