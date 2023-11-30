@@ -1,12 +1,13 @@
 {
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs-with-inter-v4.url = "github:SharzyL/nixpkgs/inter_4";
     snowfall-lib = {
       url = "github:snowfallorg/lib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-artwork = { url = "github:NixOS/nixos-artwork"; flake = false; };
-    nixpkgs-with-inter-v4.url = "github:SharzyL/nixpkgs/inter_4";
+    vscode-extensions.url = "github:nix-community/nix-vscode-extensions"; # Declaratively install VSCode extensions
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     # Home Manager
     home-manager = {
@@ -24,6 +25,16 @@
       };
     };
     firefox-gnome-theme = { url = "github:rafaelmardojai/firefox-gnome-theme/nightly"; flake = false; }; # Firefox Gnome
+
+    # Inputs from other friends using NixOS
+
+    jack5079 = {
+      url = "github:jack5079/dotfiles";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
+    };
   };
 
   outputs = inputs:
@@ -34,9 +45,14 @@
       package-namespace = "me";
       src = ./.;
 
-      # Funnybox NixOS system modules
-      systems.hosts.funnybox = with inputs; [
+      #
+      systems.hosts.funnybox.modules = with inputs; [
         nix-flatpak.nixosModules.nix-flatpak
+      ];
+
+      # Home Manager modules
+      homes.users."charlie@funnybox".modules = with inputs; [
+        jack5079.homeModules.bun
       ];
     };
 }
