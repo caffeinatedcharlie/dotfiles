@@ -48,11 +48,13 @@
       #
       systems.hosts.funnybox.modules = with inputs; [
         nix-flatpak.nixosModules.nix-flatpak
+        jack5079.nixosModules.hardened # Jack5079's NixOS hardened module
+        jack5079.nixosModules.virt-manager # Jack5079's Virt-Manager module
       ];
 
       # Home Manager modules
       homes.users."charlie@funnybox".modules = with inputs; [
-        jack5079.homeModules.bun
+        jack5079.homeModules.bun # Jack5079's bun module
       ];
     };
 }
