@@ -11,8 +11,6 @@
       ./hardware.nix
       # Desktop environment
       ./desktop.nix
-      # Flatpaks
-      ./flatpak.nix
     ];
 
   security.hardened = true;
