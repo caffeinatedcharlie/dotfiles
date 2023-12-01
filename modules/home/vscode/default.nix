@@ -9,8 +9,8 @@
     programs.vscode = {
       # https://github.com/nix-community/home-manager/issues/4394#issuecomment-1712909231
       mutableExtensionsDir = false;
-      languageSnippets = import ./snippets.nix;
-      extensions = import ./extensions.nix inputs.vscode-extensions.extensions.${system}.vscode-marketplace;
+      languageSnippets = import "${inputs.jack5079}/modules/home/vscode/snippets.nix";
+      extensions = import "${inputs.jack5079}/modules/home/vscode/extensions.nix" inputs.vscode-extensions.extensions.${pkgs.system}.vscode-marketplace;
     };
   };
 }
