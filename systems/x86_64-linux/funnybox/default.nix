@@ -15,6 +15,8 @@
       ./sound.nix
       # Global services
       ./services.nix
+      # Flatpak
+      ./flatpak.nix
     ];
 
   security.hardened = true; # Enable NixOS hardening

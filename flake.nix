@@ -7,7 +7,7 @@
     };
     nixos-artwork = { url = "github:NixOS/nixos-artwork"; flake = false; };
     vscode-extensions.url = "github:nix-community/nix-vscode-extensions"; # Declaratively install VSCode extensions
-    nix-flatpak.url = "github:gmodena/nix-flatpak";
+    nix-flatpak.url = "github:GermanBread/declarative-flatpak/stable"; # Declaratively install Flatpaks
     # Home Manager
     home-manager = {
       url = "home-manager";
@@ -44,14 +44,12 @@
       package-namespace = "me";
       src = ./.;
 
-      #
+      # Funnybox
       systems.hosts.funnybox.modules = with inputs; [
-        nix-flatpak.nixosModules.nix-flatpak
         jack5079.nixosModules.hardened # Jack5079's NixOS hardened module
         jack5079.nixosModules.virt-manager # Jack5079's Virt-Manager module
+        nix-flatpak.nixosModules.default # Install flatpaks
       ];
-
-      # Home Manager modules
       homes.users."charlie@funnybox".modules = with inputs; [
         jack5079.homeModules.bun # Jack5079's bun module
       ];
