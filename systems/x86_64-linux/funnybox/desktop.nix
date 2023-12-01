@@ -17,7 +17,6 @@
     gnome.simple-scan
     gnome.gnome-maps
     gnome.geary
-    gnome.cheese
     epiphany
     gnome.gnome-music
   ];
