@@ -7,7 +7,7 @@ let
 in
 {
   options = {
-    programs.vesktop = { enable = mkEnableOption "Vesktop Discord cleint"; };
+    programs.vesktop = { enable = mkEnableOption "Vesktop Discord client"; };
   };
 
   config = lib.mkIf cfg.enable {
