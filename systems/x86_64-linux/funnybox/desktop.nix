@@ -17,6 +17,7 @@
     gnome.simple-scan
     gnome.gnome-maps
     gnome.geary
+    gnome.gnome-software
     epiphany
     gnome.gnome-music
   ];
