@@ -25,7 +25,6 @@
     "flathub:app/com.github.neithern.g4music/x86_64/stable" # G4Music (Music player)
     "flathub:app/app.drey.Biblioteca/x86_64/stable" # Bibliotecha (GNOME documentation reader)
     "flathub:app/io.gitlab.adhami3310.Impression/x86_64/stable" # Impression (Bootable USB maker)
-    "flathub:app/io.missioncenter.MissionCenter/x86_64/stable" # Mission Center (View system resource usage)
     "flathub:app/com.github.johnfactotum.QuickLookup/x86_64/stable" # Quick Lookup (Lookup words quickly with the dictionary)
     "flathub:app/com.github.johnfactotum.Foliate/x86_64/stable" # Foliate (E-Book Reader)
     "flathub:app/info.febvre.Komikku/x86_64/stable" # Komikku (Manga reader)
