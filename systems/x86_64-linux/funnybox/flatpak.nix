@@ -10,7 +10,15 @@
     "flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepo";
     "flathub-beta" = "https://dl.flathub.org/beta-repo/flathub-beta.flatpakrepo";
   };
+  services.flatpak.overrides = {
+    "global" = {
+      environment = {
+        "WEBKIT_DISABLE_DMABUF_RENDERER" = 1;
+      };
+    };
+  };
   services.flatpak.packages = [
+    "flathub:app/com.belmoussaoui.Obfuscate/x86_64/stable" # Obfuscate (Censor information inside of images)
     "flathub:app/org.gnome.design.IconLibrary/x86_64/stable" # Icon Libary (GNOME symbolic icon library)
     "flathub:app/org.gnome.design.Emblem/x86_64/stable" # Emblem (Use symbolic SVG's to generate logos)
     "flathub:app/org.gnome.Fractal/x86_64/stable" # Fractal (Matrix client)
