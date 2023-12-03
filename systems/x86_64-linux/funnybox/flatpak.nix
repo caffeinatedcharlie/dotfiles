@@ -34,6 +34,7 @@
     "flathub:app/com.github.unrud.VideoDownloader/x86_64/stable" # Video Downloader (self explanatory)
     "flathub:app/com.usebottles.bottles/x86_64/stable" # Bottles (Run Windows software on Linux)
     "flathub:app/com.vysp3r.ProtonPlus/x86_64/stable" # ProtonPlus (Wine and Proton-based compatibility tools manager)
+    "flathub:app/org.vinegarhq.Vinegar/x86_64/stable" # Roblox (I wish I didn't need this)
   ];
 }
 
