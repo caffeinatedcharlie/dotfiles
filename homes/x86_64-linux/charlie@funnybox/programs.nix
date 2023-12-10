@@ -16,8 +16,8 @@
     };
     git = {
       enable = true;
-      userName = "charlieborin";
-      userEmail = "148908691+charlieborin@users.noreply.github.com";
+      userName = "caffeinatedcharlie";
+      userEmail = "148908691+caffeinatedcharlie@users.noreply.github.com";
       extraConfig = {
         core.editor = "code --wait";
         init.defaultBranch = "main";
