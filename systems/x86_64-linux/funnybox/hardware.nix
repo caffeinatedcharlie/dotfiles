@@ -19,20 +19,22 @@
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.modesetting.enable = true;
 
+
   fileSystems."/" =
-    {
-      device = "/dev/disk/by-uuid/f43f9fa2-6fb1-41e8-b7fc-80509cf0ccba";
+    { device = "/dev/disk/by-uuid/954a10a6-20ff-459d-8943-43352f250ffc";
       fsType = "ext4";
     };
 
+  boot.initrd.luks.devices."luks-abfd5b83-51d1-448e-81cc-23c55f2cc70a".device = "/dev/disk/by-uuid/abfd5b83-51d1-448e-81cc-23c55f2cc70a";
+
   fileSystems."/boot" =
-    {
-      device = "/dev/disk/by-uuid/3D67-C94E";
+    { device = "/dev/disk/by-uuid/0F18-8308";
       fsType = "vfat";
     };
 
   swapDevices =
-    [{ device = "/dev/disk/by-uuid/77fc5895-dc45-4777-8625-97d26eadd6a3"; }];
+    [ { device = "/dev/disk/by-uuid/a3def839-5c68-4fad-aaba-d2a2a6d6b964"; }
+    ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's

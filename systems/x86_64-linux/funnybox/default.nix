@@ -17,6 +17,8 @@
       ./services.nix
     ];
 
+  boot.initrd.luks.devices."luks-c25a1380-a4c3-4abf-8458-ab6915b7dab4".device = "/dev/disk/by-uuid/c25a1380-a4c3-4abf-8458-ab6915b7dab4"; # LUKS
+
   security.hardened = true; # Enable NixOS hardening
 
   home-manager.useUserPackages = true; # "This is necessary if, for example, you wish to use `nixos-rebuild build-vm`" ―https://nix-community.github.io/home-manager/#:~:text=use%20nixos-rebuild-,build-vm,-.%20This%20option%20may
@@ -27,9 +29,33 @@
 
   networking.hostName = "funnybox"; # Define your hostname.
   networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
-
+  
+  # Set your time zone.
   time.timeZone = "Europe/London";
-  services.xserver.layout = "gb";
+  
+  # Select internationalisation properties.
+  i18n.defaultLocale = "en_GB.UTF-8";
+
+  i18n.extraLocaleSettings = {
+    LC_ADDRESS = "en_GB.UTF-8";
+    LC_IDENTIFICATION = "en_GB.UTF-8";
+    LC_MEASUREMENT = "en_GB.UTF-8";
+    LC_MONETARY = "en_GB.UTF-8";
+    LC_NAME = "en_GB.UTF-8";
+    LC_NUMERIC = "en_GB.UTF-8";
+    LC_PAPER = "en_GB.UTF-8";
+    LC_TELEPHONE = "en_GB.UTF-8";
+    LC_TIME = "en_GB.UTF-8";
+  };
+
+  # Configure keymap in X11
+  services.xserver = {
+    layout = "gb";
+    xkbVariant = "";
+  };
+
+  # Configure console keymap
+  console.keyMap = "uk";
 
   nix = {
     # https://nixos.org/manual/nix/stable/command-ref/conf-file.html
@@ -53,6 +79,7 @@
     registry.nixpkgs.flake = inputs.nixpkgs; # https://github.com/NixOS/nix/pull/6530, "incompatible changes"
   };
 
+  users.mutableUsers = false;
   users.users.charlie = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "libvirtd" "adbusers" ]; # Enable ‘sudo’ for the user.
