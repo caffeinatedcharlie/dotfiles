@@ -51,6 +51,7 @@
       ];
       homes.users."charlie@funnybox".modules = with inputs; [
         jack5079.homeModules.bun # Jack5079's bun module
+        jack5079.homeModules.vscode # Jack5079's vscode module
       ];
     };
 }
