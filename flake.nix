@@ -5,6 +5,10 @@
       url = "github:snowfallorg/lib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-index-database = {
+      url = "github:Mic92/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-software-center.url = "github:vlinkz/nix-software-center"; # Nix Software Center
     nixos-artwork = { url = "github:NixOS/nixos-artwork"; flake = false; };
     vscode-extensions.url = "github:nix-community/nix-vscode-extensions"; # Declaratively install VSCode extensions
@@ -52,6 +56,7 @@
       homes.users."charlie@funnybox".modules = with inputs; [
         jack5079.homeModules.bun # Jack5079's bun module
         jack5079.homeModules.vscode # Jack5079's vscode module
+        nix-index-database.hmModules.nix-index # Comma
       ];
     };
 }

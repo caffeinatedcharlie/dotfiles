@@ -4,6 +4,7 @@
     bun.enable = true;
     vscode.enable = true;
     vesktop.enable = true;
+    nix-index-database.comma.enable = true;
     nushell = {
       enable = true;
       shellAliases = {
