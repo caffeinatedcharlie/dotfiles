@@ -21,6 +21,11 @@
     epiphany
     gnome.gnome-music
   ];
+  # Theme
+  environment.systemPackages = [
+    pkgs.adwaita-qt
+  ];
+  qt.style = "adwaita-dark";
   # Fonts
   fonts = {
     packages = [ pkgs.inter pkgs.noto-fonts-cjk-sans pkgs.source-sans-pro pkgs.go-font pkgs.monaspace ];
