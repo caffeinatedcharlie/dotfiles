@@ -29,10 +29,10 @@
 
   networking.hostName = "funnybox"; # Define your hostname.
   networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
-  
+
   # Set your time zone.
   time.timeZone = "Europe/London";
-  
+
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
 
@@ -56,6 +56,13 @@
 
   # Configure console keymap
   console.keyMap = "uk";
+
+  # Environment Variables
+  environment.sessionVariables = rec {
+    "__EGL_VENDOR_LIBRARY_FILENAMES" = "/run/opengl-driver/share/glvnd/egl_vendor.d/50_mesa.json";
+    "__GLX_VENDOR_LIBRARY_NAME" = "mesa";
+    "VK_ICD_FILENAMES" = "/run/opengl-driver/share/vulkan/icd.d/radeon_icd.x86_64.json:/run/opengl-driver/share/vulkan/icd.d/radeon_icd.i686.json";
+  };
 
   nix = {
     # https://nixos.org/manual/nix/stable/command-ref/conf-file.html
