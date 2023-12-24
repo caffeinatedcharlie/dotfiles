@@ -13,15 +13,15 @@
 
 pkgs.writeShellScriptBin "nvidia-load" ''
   #!/bin/bash
+  
+  sudo virsh nodedev-reattach pci_0000_01_00_0
+  sudo virsh nodedev-reattach pci_0000_01_00_1
 
   sudo modprobe nvidia_drm
   sudo modprobe nvidia_modeset
   sudo modprobe i2c_nvidia_gpu
   sudo modprobe nvidia_uvm
   sudo modprobe nvidia
-  
-  sudo virsh nodedev-reattach pci_0000_01_00_0
-  sudo virsh nodedev-reattach pci_0000_01_00_1
 
   echo "NVIDIA drivers successfully loaded!"
 ''
