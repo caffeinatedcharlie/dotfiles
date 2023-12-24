@@ -11,17 +11,23 @@
 , ...
 }:
 
-pkgs.writeShellScriptBin "nvidia-load" ''
-  #!/bin/bash
-  
-  sudo virsh nodedev-reattach pci_0000_01_00_0
-  sudo virsh nodedev-reattach pci_0000_01_00_1
+pkgs.writeShellApplication {
+  name = "nvidia-load";
 
-  sudo modprobe nvidia_drm
-  sudo modprobe nvidia_modeset
-  sudo modprobe i2c_nvidia_gpu
-  sudo modprobe nvidia_uvm
-  sudo modprobe nvidia
+  runtimeInputs = with pkgs; [ kmod libvirt ];
 
-  echo "NVIDIA drivers successfully loaded!"
-''
+  text = ''
+    #!/bin/bash
+
+    sudo virsh nodedev-reattach pci_0000_01_00_0
+    sudo virsh nodedev-reattach pci_0000_01_00_1
+
+    sudo modprobe nvidia_drm
+    sudo modprobe nvidia_modeset
+    sudo modprobe i2c_nvidia_gpu
+    sudo modprobe nvidia_uvm
+    sudo modprobe nvidia
+
+    echo "NVIDIA drivers successfully loaded!"
+  '';
+}
