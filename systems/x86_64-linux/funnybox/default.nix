@@ -13,7 +13,7 @@
       ./desktop.nix
       # Enable sound
       ./sound.nix
-      # Global services
+      # Global services and programs
       ./services.nix
     ];
 
@@ -88,9 +88,17 @@
 
   users.mutableUsers = false;
   users.users.charlie = {
+    # My user account
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "libvirtd" "adbusers" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" "libvirtd" "adbusers" "podman" ]; # Enable ‘sudo’ for the user.
     initialHashedPassword = "$y$j9T$ajJkU9entxo2ivw./lvmN1$xWO8PSHNbhepefmmSsyXKC4mZ3wuucOB1sz7QuQi6pB";
+    shell = pkgs.nushell;
+  };
+  users.users.unsafe_software_user = {
+    # Used for using tools like Java and Python when they just add stuff to home dir and I don't need it mostly
+    isNormalUser = true;
+    extraGroups = [ "wheel" "networkmanager" "libvirtd" "adbusers" "podman" ]; # Enable ‘sudo’ for the user.
+    initialHashedPassword = "$y$j9T$1lzGM8nagT4fOijlBNDMt/$K.4CUn2f9.UfTQQQRrhL7dH5Czfm2FXm9R0wFbbevv6";
     shell = pkgs.nushell;
   };
   environment.shells = with pkgs; [ nushell ];
