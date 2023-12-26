@@ -90,7 +90,7 @@
   users.users.charlie = {
     # My user account
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "libvirtd" "adbusers" "podman" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" "libvirtd" "adbusers" "podman" "lxd" ]; # Enable ‘sudo’ for the user.
     initialHashedPassword = "$y$j9T$ajJkU9entxo2ivw./lvmN1$xWO8PSHNbhepefmmSsyXKC4mZ3wuucOB1sz7QuQi6pB";
     shell = pkgs.nushell;
   };

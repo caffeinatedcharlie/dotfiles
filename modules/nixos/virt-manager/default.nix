@@ -6,6 +6,7 @@ in
 {
   config = lib.mkIf cfg.enable
     {
+      virtualisation.lxd.enable = true;
       virtualisation.spiceUSBRedirection.enable = true;
       virtualisation.libvirtd = {
         enable = true;
