@@ -30,6 +30,8 @@
     pkgs.mangohud # MangoHud overlay
     pkgs.yubikey-manager-qt # YubiKey manager
   ];
+  # ADB
+  programs.adb.enable = true;
   # YubiKey
   services.udev.packages = [ pkgs.yubikey-personalization ];
   services.pcscd.enable = true;
