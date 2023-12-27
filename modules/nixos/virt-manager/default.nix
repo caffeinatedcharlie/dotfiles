@@ -14,8 +14,8 @@ in
           {
             size = 128;
             permissions = {
-              user = "charlie";
-              group = "libvirtd";
+              user = "root";
+              group = "root";
               mode = "0600";
             };
           }
