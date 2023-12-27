@@ -9,13 +9,10 @@
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-std.url = "github:chessai/nix-std";
     nix-software-center.url = "github:vlinkz/nix-software-center"; # Nix Software Center
     nixos-artwork = { url = "github:NixOS/nixos-artwork"; flake = false; };
     vscode-extensions.url = "github:nix-community/nix-vscode-extensions"; # Declaratively install VSCode extensions
-    # nixos-vfio = {
-    #   url = "github:j-brn/nixos-vfio";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
     # Home Manager
     home-manager = {
       url = "home-manager";
@@ -55,7 +52,6 @@
       # Funnybox
       systems.hosts.funnybox.modules = with inputs; [
         jack5079.nixosModules.hardened # Jack5079's NixOS hardened module
-        # nixos-vfio.nixosModules.default # KVMFR Virtualisation module
       ];
       homes.users."charlie@funnybox".modules = with inputs; [
         jack5079.homeModules.bun # Jack5079's bun module

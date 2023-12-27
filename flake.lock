@@ -553,6 +553,21 @@
         "type": "github"
       }
     },
+    "nix-std": {
+      "locked": {
+        "lastModified": 1701658249,
+        "narHash": "sha256-KIt1TUuBvldhaVRta010MI5FeQlB8WadjqljybjesN0=",
+        "owner": "chessai",
+        "repo": "nix-std",
+        "rev": "715db541ffff4194620e48d210b76f73a74b5b5d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "chessai",
+        "repo": "nix-std",
+        "type": "github"
+      }
+    },
     "nixos-artwork": {
       "flake": false,
       "locked": {
@@ -670,6 +685,7 @@
         "jack5079": "jack5079",
         "nix-index-database": "nix-index-database_2",
         "nix-software-center": "nix-software-center_2",
+        "nix-std": "nix-std",
         "nixos-artwork": "nixos-artwork",
         "nixpkgs": "nixpkgs_3",
         "snowfall-lib": "snowfall-lib_2",
