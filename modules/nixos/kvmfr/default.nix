@@ -1,13 +1,14 @@
 # This was purely taken from https://raw.githubusercontent.com/j-brn/nixos-vfio/master/modules/kvmfr/default.nix
 # This was done because using the full VFIO module messed up my whole config and I have zero idea how to import KVMFR separately
 # The code in this file is therefore licensed under the MIT license
+# As a final note I did modify it to take std from inputs instead of expecting it to be passed to the module and because libvirtd.devicesACL does not exist in this context I removed it
 
-{ std }:
-{ lib, pkgs, config, ... }:
+{ inputs, lib, pkgs, config, ... }:
 
 with lib;
 
 let
+  std = inputs.nix-std;
   cfg = config.virtualisation.kvmfr;
 
   sizeFromResolution = resolution:
@@ -143,7 +144,5 @@ in
           text = mkIf config.security.apparmor.enable apparmorAbstraction;
         };
     };
-
-    virtualisation.libvirtd.deviceACL = devices;
   };
 }
