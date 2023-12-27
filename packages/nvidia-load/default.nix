@@ -19,6 +19,8 @@ pkgs.writeShellApplication {
   text = ''
     #!/bin/bash
 
+    sudo udevadm trigger -w -v --type=devices --action=add /sys/bus/pci/devices/0000:01:00.0
+
     sudo virsh nodedev-reattach pci_0000_01_00_0
     sudo virsh nodedev-reattach pci_0000_01_00_1
 
