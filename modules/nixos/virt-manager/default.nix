@@ -16,7 +16,7 @@ in
             permissions = {
               user = "charlie";
               group = "libvirtd";
-              mode = "0660";
+              mode = "0600";
             };
           }
         ];
