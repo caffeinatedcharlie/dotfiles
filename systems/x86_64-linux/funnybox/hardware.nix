@@ -15,7 +15,7 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.kernelParams = [ "amd_iommu=on" ];
-  boot.extraModulePackages = with config.boot.kernelPackages; [ xpadneo ];
+  boot.extraModulePackages = with config.boot.kernelPackages; [ xpadneo kvmfr ];
   services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {
