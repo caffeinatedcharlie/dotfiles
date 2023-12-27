@@ -388,11 +388,11 @@
         "vscode-extensions": "vscode-extensions"
       },
       "locked": {
-        "lastModified": 1703637523,
-        "narHash": "sha256-Pjrou6sI4HhoHo5UzN9s2EqegyeRrAHbdgEB6DWxrY4=",
+        "lastModified": 1703638451,
+        "narHash": "sha256-MIELvLb08bLABzDp3FHweBgdDLaZwYynr8VmTMfk5qg=",
         "owner": "jack5079",
         "repo": "dotfiles",
-        "rev": "4b180012f5140dab2a4e102be6e10e14526ea438",
+        "rev": "9abe649d75c4ae72e8123b9ccc880057c99b0e9b",
         "type": "github"
       },
       "original": {
