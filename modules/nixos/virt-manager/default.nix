@@ -7,20 +7,20 @@ in
   config = lib.mkIf cfg.enable
     {
       virtualisation.spiceUSBRedirection.enable = true;
-      virtualisation.kvmfr = {
-        enable = true;
+      # virtualisation.kvmfr = {
+      #   enable = true;
 
-        devices = [
-          {
-            size = 128;
-            permissions = {
-              user = "charlie";
-              group = "libvirtd";
-              mode = "0600";
-            };
-          }
-        ];
-      };
+      #   devices = [
+      #     {
+      #       size = 128;
+      #       permissions = {
+      #         user = "charlie";
+      #         group = "libvirtd";
+      #         mode = "0600";
+      #       };
+      #     }
+      #   ];
+      # };
       virtualisation.libvirtd = {
         enable = true;
         qemu = {
