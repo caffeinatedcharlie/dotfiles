@@ -19,7 +19,7 @@ pkgs.writeShellApplication {
   text = ''
     #!/bin/bash
 
-    udevadm trigger -w -v --type=devices --action=remove /sys/bus/pci/devices/0000:03:00.0
+    sudo udevadm trigger -w -v --type=devices --action=remove /sys/bus/pci/devices/0000:03:00.0
 
     sudo modprobe -r nvidia_drm
     sudo modprobe -r nvidia_modeset
