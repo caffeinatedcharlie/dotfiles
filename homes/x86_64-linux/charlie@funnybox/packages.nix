@@ -5,7 +5,7 @@
     inputs.self.packages.${pkgs.system}.nvidia-unload
     inputs.self.packages.${pkgs.system}.nvidia-load
     inputs.self.packages.${pkgs.system}.nix-gear-wallpaper
-    pkgs.vesktop
+    inputs.jack5079.packages.${pkgs.system}.vesktop-with-sane-icon
     pkgs.helvum
     pkgs.toolbox
     pkgs.prismlauncher-qt5
