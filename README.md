@@ -1,4 +1,4 @@
-<h1 align="center">charlie.cab/dotfiles</h1>
+<h1 align="center">charlie.downgraded.uk/dotfiles</h1>
 
 <p align="center">
  <a href="https://nixos.wiki/wiki/Flakes" target="_blank">
