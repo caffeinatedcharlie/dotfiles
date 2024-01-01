@@ -16,5 +16,6 @@
     pkgs.komikku
     pkgs.fragments
     pkgs.tor-browser
+    pkgs.protonvpn-gui
   ];
 }
