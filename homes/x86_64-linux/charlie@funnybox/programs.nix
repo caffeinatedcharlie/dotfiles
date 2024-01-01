@@ -26,7 +26,7 @@
     git = {
       enable = true;
       userName = "caffeinatedcharlie";
-      userEmail = "148908691+caffeinatedcharlie@users.noreply.github.com";
+      userEmail = "git@downgraded.uk";
       extraConfig = {
         core.editor = "code --wait";
         init.defaultBranch = "main";
