@@ -16,6 +16,7 @@
     pkgs.komikku
     pkgs.fragments
     pkgs.tor-browser
+    pkgs.newsflash
     pkgs.protonvpn-gui
     pkgs.protonmail-bridge
   ];
