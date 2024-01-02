@@ -17,5 +17,6 @@
     pkgs.fragments
     pkgs.tor-browser
     pkgs.protonvpn-gui
+    pkgs.protonmail-bridge
   ];
 }
