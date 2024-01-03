@@ -3,15 +3,6 @@
     firefox.enable = true;
     vscode.enable = true;
     nix-index-database.comma.enable = true;
-    looking-glass-client = {
-      enable = true;
-      settings = {
-        app = {
-          allowDMA = true;
-          shmFile = "/dev/kvmfr0";
-        };
-      };
-    };
     nushell = {
       enable = true;
       shellAliases = {

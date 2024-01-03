@@ -18,7 +18,7 @@
     enable = true;
     package = pkgs.mullvad-vpn;
   };
-  programs.virt-manager.enable = true; # Enable virt-manager
+  programs.virt-manager.enable = false; # Enable virt-manager
   # Enable Steam and related things
   programs.steam = {
     enable = true;
