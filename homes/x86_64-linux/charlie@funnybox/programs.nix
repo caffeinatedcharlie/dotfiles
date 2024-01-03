@@ -1,7 +1,6 @@
 { inputs, pkgs, system, lib, ... }: {
   programs = {
     firefox.enable = true;
-    bun.enable = true;
     vscode.enable = true;
     nix-index-database.comma.enable = true;
     looking-glass-client = {
