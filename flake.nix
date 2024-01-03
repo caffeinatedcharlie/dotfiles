@@ -12,7 +12,6 @@
     nix-std.url = "github:chessai/nix-std";
     nix-software-center.url = "github:vlinkz/nix-software-center"; # Nix Software Center
     nixos-artwork = { url = "github:NixOS/nixos-artwork"; flake = false; };
-    vscode-extensions.url = "github:nix-community/nix-vscode-extensions"; # Declaratively install VSCode extensions
     # Home Manager
     home-manager = {
       url = "home-manager";
@@ -54,7 +53,6 @@
         jack5079.nixosModules.hardened # Jack5079's NixOS hardened module
       ];
       homes.users."charlie@funnybox".modules = with inputs; [
-        jack5079.homeModules.bun # Jack5079's bun module
         jack5079.homeModules.vscode # Jack5079's vscode module
         nix-index-database.hmModules.nix-index # Comma
       ];
