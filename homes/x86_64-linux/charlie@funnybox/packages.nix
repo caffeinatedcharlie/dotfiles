@@ -19,6 +19,5 @@
     pkgs.newsflash
     pkgs.protonvpn-gui
     pkgs.protonmail-bridge
-    pkgs.vinegar
   ];
 }
