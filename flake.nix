@@ -56,5 +56,10 @@
         jack5079.homeModules.vscode # Jack5079's vscode module
         nix-index-database.hmModules.nix-index # Comma
       ];
+
+      # hppro3500
+      systems.hosts.hppro3500.modules = with inputs; [
+        jack5079.nixosModules.hardened
+      ];
     };
 }
