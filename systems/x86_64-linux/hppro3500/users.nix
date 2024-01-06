@@ -10,7 +10,7 @@
     # My user account
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
-    hashedPassword = "$y$j9T$.R00sHuPCc0u4D18npy/F0$KfKAYsX1hu0zPvs4Z.QM8hJg1c38N7gfXNfmrahLhkC";
+    hashedPassword = "$y$j9T$boMWYjGKnwVQ0sxwR.ofh.$CfOzCaBb93fOMBXYnykzXCzxFbYTJpGvni/mejZ3dK3";
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILjyJsQIi+dvl6nO3OfRLBGILFlNuNpqrFfKYprkbG0x"
     ];
