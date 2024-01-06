@@ -5,6 +5,13 @@
 { config, pkgs, inputs, ... }:
 
 {
+  # hyprland
+  programs.hyprland = {
+    # Install the packages from nixpkgs
+    enable = true;
+    # Whether to enable XWayland
+    xwayland.enable = true;
+  };
   # PODMAN
   virtualisation.podman = {
     enable = true;
