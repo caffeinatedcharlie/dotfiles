@@ -1,10 +1,9 @@
-{ lib, osConfig, pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
-  config = lib.mkIf osConfig.programs.hyprland.enable {
-    programs.hyprland = {
-      # Whether to enable XWayland
-      xwayland.enable = true;
-    };
+  programs.hyprland = {
+    enable = true;
+    # Whether to enable XWayland
+    xwayland.enable = true;
   };
 }
