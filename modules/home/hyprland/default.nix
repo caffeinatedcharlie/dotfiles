@@ -8,5 +8,8 @@
     package = pkgs.hyprland;
     # Whether to enable XWayland
     xwayland.enable = true;
+
+    # Disable boot
+    systemd.enable = false;
   };
 }
