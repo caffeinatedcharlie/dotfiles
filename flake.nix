@@ -18,9 +18,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Hyprland
-    hyprland.url = "github:hyprwm/Hyprland";
-
     # Web Experience!
 
     # Firefox Nightly
