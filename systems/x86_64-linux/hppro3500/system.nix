@@ -5,8 +5,6 @@
 { config, pkgs, inputs, ... }:
 
 {
-  security.hardened = true; # Enable NixOS hardening
-
   home-manager.useUserPackages = true; # "This is necessary if, for example, you wish to use `nixos-rebuild build-vm`" ―https://nix-community.github.io/home-manager/#:~:text=use%20nixos-rebuild-,build-vm,-.%20This%20option%20may
   home-manager.useGlobalPkgs = true;
   # Use the systemd-boot EFI boot loader.
