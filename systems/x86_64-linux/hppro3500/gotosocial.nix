@@ -17,6 +17,7 @@
   };
   services.nginx = {
     enable = true;
+    recommendedTlsSettings = true;
     clientMaxBodySize = "40M";
     virtualHosts = with config.services.gotosocial.settings; {
       "${host}" = {
