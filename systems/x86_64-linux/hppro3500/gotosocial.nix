@@ -23,6 +23,7 @@
       "${host}" = {
         enableACME = true;
         forceSSL = true;
+        acmeRoot = null;
         locations = {
           "/" = {
             recommendedProxySettings = true;
