@@ -31,6 +31,7 @@
   security.acme = {
     acceptTerms = true;
     defaults.email = "acme@downgraded.uk";
+    defaults.group = "nginx";
   };
 
   nix = {
