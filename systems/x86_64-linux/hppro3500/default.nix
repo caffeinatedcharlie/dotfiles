@@ -10,7 +10,7 @@
       ./system.nix
       ./hardware.nix
       ./users.nix
-      ./gotosocial.nix
+      #./gotosocial.nix
     ];
 
   # This value determines the NixOS release from which the default
