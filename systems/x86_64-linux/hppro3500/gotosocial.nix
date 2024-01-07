@@ -12,6 +12,7 @@
       host = "busygam.ing";
       protocol = "https";
       bind-address = "127.0.0.1";
+      storage-local-base-path = "/var/lib/gotosocial/storage";
       accounts-registration-open = false;
       accounts-reason-required = false;
       port = 8080;
