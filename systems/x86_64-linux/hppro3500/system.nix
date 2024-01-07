@@ -28,7 +28,10 @@
     settings.PermitRootLogin = "no";
   };
 
-  security.acme.acceptTerms = true;
+  security.acme = {
+    acceptTerms = true;
+    defaults.email = "acme@downgraded.uk";
+  };
 
   nix = {
     # https://nixos.org/manual/nix/stable/command-ref/conf-file.html
