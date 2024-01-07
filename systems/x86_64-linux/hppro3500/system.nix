@@ -30,6 +30,7 @@
     acceptTerms = true;
     defaults.email = "acme@downgraded.uk";
     defaults.group = "nginx";
+    defaults.dnsProvider = "namecheap";
   };
   services.logrotate.checkConfig = false;
 
