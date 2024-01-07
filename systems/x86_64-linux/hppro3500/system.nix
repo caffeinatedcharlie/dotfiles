@@ -31,6 +31,7 @@
     defaults.email = "acme@downgraded.uk";
     defaults.group = "nginx";
   };
+  services.logrotate.checkConfig = false;
 
   nix = {
     # https://nixos.org/manual/nix/stable/command-ref/conf-file.html
