@@ -26,14 +26,6 @@
     settings.PermitRootLogin = "no";
   };
 
-  security.acme = {
-    acceptTerms = true;
-    defaults.email = "acme@downgraded.uk";
-    defaults.group = "nginx";
-    defaults.dnsProvider = "namecheap";
-  };
-  services.logrotate.checkConfig = false;
-
   nix = {
     # https://nixos.org/manual/nix/stable/command-ref/conf-file.html
     settings = {
