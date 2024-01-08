@@ -26,6 +26,8 @@
     settings.PermitRootLogin = "no";
   };
 
+  programs.mosh.enable = true;
+
   nix = {
     # https://nixos.org/manual/nix/stable/command-ref/conf-file.html
     settings = {
