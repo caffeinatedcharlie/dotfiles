@@ -5,14 +5,14 @@
 { config, pkgs, inputs, ... }:
 
 {
-  services.dendrite = {
+  services.matrix-conduit = {
     enable = true;
-    settings = {
-      sync_api.search.enable = true;
-      global = {
-        server_name = "downgraded.uk";
-        private_key = "/matrix/matrix_key.pem";
-      };
+    settings.global = {
+      server_name = "downgraded.uk";
+      port = 6167;
+      database_backend = "rocksdb";
+      allow_registration = true;
+      address = "127.0.0.1";
     };
   };
 }

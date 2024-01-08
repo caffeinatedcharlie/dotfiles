@@ -8,6 +8,6 @@
   imports =
     [
       ./cloudflared.nix
-      ./dendrite.nix
+      ./conduit.nix
     ];
 }
