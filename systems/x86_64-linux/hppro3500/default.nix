@@ -10,6 +10,7 @@
       ./system.nix
       ./hardware.nix
       ./users.nix
+      ./services/hosting.nix
     ];
 
   environment.systemPackages = [
