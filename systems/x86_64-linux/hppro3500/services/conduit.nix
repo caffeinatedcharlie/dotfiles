@@ -11,6 +11,7 @@
       server_name = "downgraded.uk";
       port = 6167;
       database_backend = "rocksdb";
+      allow_registration = true;
       address = "127.0.0.1";
     };
   };
