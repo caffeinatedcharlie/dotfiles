@@ -5,9 +5,14 @@
 { config, pkgs, inputs, ... }:
 
 {
-  imports =
-    [
-      ./cloudflared.nix
-      ./dendrite.nix
-    ];
+  services.dendrite = {
+    enable = true;
+    settings = {
+      sync_api.search.enable = true;
+      global = {
+        server_name = "downgraded.uk";
+        private_key = "/matrix/matrix_key.pem";
+      };
+    };
+  };
 }
