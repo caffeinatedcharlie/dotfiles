@@ -8,5 +8,6 @@
   imports =
     [
       # ./gts.nix # GoToSocial (https://gts.busygam.ing)
+      ./conduit.nix # Rust conduit server
     ];
 }
