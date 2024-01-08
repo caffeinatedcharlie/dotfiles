@@ -7,6 +7,6 @@
 {
   imports =
     [
-      ./gts.nix # GoToSocial (https://gts.busygam.ing)
+      # ./gts.nix # GoToSocial (https://gts.busygam.ing)
     ];
 }
