@@ -38,6 +38,17 @@
         home-manager.follows = "home-manager";
       };
     };
+
+    # Server inputs
+
+    conduit = {
+      url = "gitlab:famedly/conduit";
+
+      # Assuming you have an input for nixpkgs called `nixpkgs`. If you experience
+      # build failures while using this, try commenting/deleting this line. This
+      # will probably also require you to always build from source.
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs:
