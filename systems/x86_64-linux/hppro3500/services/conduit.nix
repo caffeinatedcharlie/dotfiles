@@ -1,14 +1,10 @@
-{ config
-, pkgs
-, flake-inputs
-, ...
-}:
+{ config, pkgs, inputs, ... }:
 
 let
   # You'll need to edit these values
 
   # The hostname that will appear in your user and room IDs
-  server_name = "example.com";
+  server_name = "downgraded.uk";
 
   # The hostname that Conduit actually runs on
   #
