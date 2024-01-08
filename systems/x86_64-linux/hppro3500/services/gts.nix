@@ -22,7 +22,7 @@
     enable = true;
     tunnels = {
       "0e783743-e754-4ae2-a095-2346280a6b94" = {
-        credentialsFile = "/home/user/.cloudflared/0e783743-e754-4ae2-a095-2346280a6b94.json";
+        credentialsFile = "/cloudflared/credentials/0e783743-e754-4ae2-a095-2346280a6b94.json";
         default = "http_status:404";
         ingress = {
           "gts.busygam.ing" = with config.services.gotosocial.settings; {
