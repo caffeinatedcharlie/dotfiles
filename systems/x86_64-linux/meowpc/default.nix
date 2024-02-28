@@ -5,6 +5,8 @@
       ./hardware.nix
       # Import Nix package manager configuration
       ./nix.nix
+      # Import sound configuration
+      ./sound.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
