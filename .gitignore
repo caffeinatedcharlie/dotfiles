@@ -1,0 +1,4 @@
+# Base configuration files (generated using `nixos-generate-config --dir ./`)
+
+configuration.nix
+hardware-configuration.nix
