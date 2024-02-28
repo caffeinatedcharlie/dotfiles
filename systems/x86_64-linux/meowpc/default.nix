@@ -9,6 +9,8 @@
       ./sound.nix
       # Import configure session variables
       ./variables.nix
+      # Import users
+      ./users
     ];
 
   # Use the systemd-boot EFI boot loader.
