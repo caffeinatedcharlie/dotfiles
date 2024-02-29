@@ -1,4 +1,6 @@
-{ inputs, ... }: {
+{ inputs, ... }:
+
+{
   nix = {
     # https://nixos.org/manual/nix/stable/command-ref/conf-file.html
     settings = {
