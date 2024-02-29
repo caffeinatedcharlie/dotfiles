@@ -13,6 +13,8 @@
       ./variables.nix
       # Import users
       ./users
+      # Import desktop configuration
+      ./desktop
     ];
 
   # Use the systemd-boot EFI boot loader.
