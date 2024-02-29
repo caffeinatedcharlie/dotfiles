@@ -1,6 +1,5 @@
 { pkgs, ... }:
 
-
 pkgs.mkShell {
   packages = [
     pkgs.android-tools # Install ADB and Fastboot
