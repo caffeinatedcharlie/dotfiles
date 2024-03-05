@@ -15,6 +15,9 @@
   boot.extraModulePackages = with config.boot.kernelPackages; [ xpadneo kvmfr ];
   services.xserver.videoDrivers = [ "nvidia" ];
 
+  zramSwap.enable = true;
+  services.printing.enable = true; # Enable CUPS to print documents.
+
   hardware.opengl = {
     enable = true;
     driSupport = true;
