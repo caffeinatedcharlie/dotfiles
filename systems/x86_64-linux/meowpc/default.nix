@@ -24,6 +24,10 @@
         cores = 8;
       };
     };
+  security.hardened = true;
+  services.udev.packages = [
+    pkgs.android-udev-rules
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
