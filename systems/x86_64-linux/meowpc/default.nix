@@ -16,6 +16,14 @@
       # Import desktop configuration
       ./desktop
     ];
+  virtualisation.vmVariant =
+    {
+      # following configuration is added only when building VM with build-vm
+      virtualisation = {
+        memorySize = 16384;
+        cores = 8;
+      };
+    };
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
