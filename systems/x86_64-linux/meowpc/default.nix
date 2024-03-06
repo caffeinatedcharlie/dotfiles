@@ -67,6 +67,15 @@
   services.flatpak.enable = true;
   programs.virt-manager.enable = true;
 
+  # https://github.com/nix-community/srvos/blob/main/nixos/common/upgrade-diff.nix
+  system.activationScripts.diff = {
+    supportsDryActivation = true;
+    text = ''
+      if [[ -e /run/current-system ]]; then
+        ${lib.getExe pkgs.nvd} --nix-bin-dir=${config.nix.package}/bin diff /run/current-system "$systemConfig"
+      fi
+    '';
+  };
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It's perfectly fine and recommended to leave
