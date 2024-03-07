@@ -1,4 +1,6 @@
-{ inputs, pkgs, config, lib, ... }: {
+{ inputs, pkgs, config, lib, ... }:
+
+{
   config = lib.mkIf config.programs.vscode.enable {
     # LSP, see https://github.com/microsoft/vscode/issues/188612 for when I can stop installing these globally
     home.packages = with pkgs;
