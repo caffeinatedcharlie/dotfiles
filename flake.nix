@@ -8,6 +8,11 @@
     };
 
     hyprland.url = "github:hyprwm/Hyprland";
+
+    firefox = {
+      url = "github:nix-community/flake-firefox-nightly";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   # We will handle this in the next section.
