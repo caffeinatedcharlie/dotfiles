@@ -6,6 +6,12 @@
       url = "github:snowfallorg/lib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-index-database = {
+      url = "github:Mic92/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nix-std.url = "github:chessai/nix-std";
+    vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
     hyprland.url = "github:hyprwm/Hyprland";
 
@@ -33,6 +39,7 @@
 
       # meowpc
       homes.users."charlie@meowpc".modules = with inputs; [
+        nix-index-database.hmModules.nix-index
         arkenfox.hmModules.arkenfox
       ];
     };
