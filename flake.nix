@@ -13,6 +13,10 @@
       url = "github:nix-community/flake-firefox-nightly";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    arkenfox = {
+      url = "github:dwarfmaster/arkenfox-nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   # We will handle this in the next section.
@@ -26,5 +30,10 @@
       package-namespace = "me";
       snowfall.namespace = "me";
       src = ./.;
+
+      # meowpc
+      homes.users."charlie@meowpc".modules = with inputs; [
+        arkenfox.hmModules.arkenfox
+      ];
     };
 }
