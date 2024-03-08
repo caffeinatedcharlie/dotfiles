@@ -1,4 +1,6 @@
-{ extensions, pkgs }: builtins.concatLists (builtins.attrValues {
+{ extensions, pkgs }:
+
+builtins.concatLists (builtins.attrValues {
   markdown = with extensions; [
     bierner.markdown-emoji
     bierner.markdown-mermaid
