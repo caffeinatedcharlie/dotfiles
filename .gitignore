@@ -2,3 +2,7 @@
 
 configuration.nix
 hardware-configuration.nix
+
+# VM and Nix build output
+
+result
