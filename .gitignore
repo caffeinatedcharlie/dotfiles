@@ -6,3 +6,4 @@ hardware-configuration.nix
 # VM and Nix build output
 
 result
+*.qcow2
