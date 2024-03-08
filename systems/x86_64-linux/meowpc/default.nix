@@ -11,6 +11,8 @@
       ./sound.nix
       # Import configure session variables
       ./variables.nix
+      # Import services
+      ./services.nix
       # Import users
       ./users
       # Import desktop configuration
