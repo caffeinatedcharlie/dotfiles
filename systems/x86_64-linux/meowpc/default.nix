@@ -64,10 +64,6 @@
   # Configure console keymap
   console.keyMap = "uk";
 
-  # Enable essentials
-  services.flatpak.enable = true;
-  programs.virt-manager.enable = true;
-
   # https://github.com/nix-community/srvos/blob/main/nixos/common/upgrade-diff.nix
   system.activationScripts.diff = {
     supportsDryActivation = true;
