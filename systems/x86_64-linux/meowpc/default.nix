@@ -40,7 +40,6 @@
       memorySize = 16384;
       cores = 12;
       writableStoreUseTmpfs = false;
-      useBootLoader = true;
     };
   };
   security.hardened = true;
