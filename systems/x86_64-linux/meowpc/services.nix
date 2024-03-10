@@ -13,7 +13,6 @@ in
     enable = true;
     dockerCompat = true;
     dockerSocket.enable = true;
-    enableNvidia = true;
   };
   virtualisation.containers.cdi.dynamic.nvidia.enable = true;
 
