@@ -15,7 +15,6 @@ in
     dockerSocket.enable = true;
   };
   virtualisation.containers.cdi.dynamic.nvidia.enable = true;
-
   programs.virt-manager.enable = true; # Enable virt-manager
   services.flatpak.enable = true; # Flatpak
   # Custom fonts in Flatpak applications <https://github.com/NixOS/nixpkgs/issues/119433#issuecomment-1326957279>
