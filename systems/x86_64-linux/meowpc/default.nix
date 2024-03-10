@@ -18,14 +18,31 @@
       # Import desktop configuration
       ./desktop
     ];
-  virtualisation.vmVariant =
-    {
-      # following configuration is added only when building VM with build-vm
-      virtualisation = {
-        memorySize = 16384;
-        cores = 8;
-      };
+  virtualisation.vmVariant = {
+    services.qemuGuest.enable = true;
+    boot = {
+      kernelParams = [
+        "nosplash"
+        "systemd.show_status=true"
+        "systemd.log_level=debug"
+      ];
     };
+    virtualisation = {
+      qemu.options = [
+        "-enable-kvm"
+        "-display gtk,gl=on,zoom-to-fit=on,grab-on-hover=on"
+        "-device virtio-vga-gl"
+        "-device usb-mouse"
+        "-device usb-tablet"
+        "-device usb-kbd"
+      ];
+      diskSize = 16000;
+      memorySize = 16384;
+      cores = 12;
+      writableStoreUseTmpfs = false;
+      useBootLoader = true;
+    };
+  };
   security.hardened = true;
   services.udev.packages = [
     pkgs.android-udev-rules
