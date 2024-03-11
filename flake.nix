@@ -15,14 +15,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-std.url = "github:chessai/nix-std";
-    vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-
     hyprland.url = "github:hyprwm/Hyprland";
-
     arkenfox = {
       url = "github:dwarfmaster/arkenfox-nixos";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
   # We will handle this in the next section.
