@@ -39,6 +39,7 @@
       homes.users."charlie@meowpc".modules = with inputs; [
         nix-index-database.hmModules.nix-index
         arkenfox.hmModules.arkenfox
+        hyprland.homeManagerModules.default
       ];
     };
 }
