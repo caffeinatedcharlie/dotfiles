@@ -30,4 +30,12 @@
     '';
     meta = old.meta;
   };
+  mkOpenVSXExt = { publisher, name, version, sha256 }: {
+    inherit name publisher version;
+    vsix = builtins.fetchurl {
+      inherit sha256;
+      url = "https://open-vsx.org/api/${publisher}/${name}/${version}/file/${publisher}.${name}-${version}.vsix";
+      name = "${publisher}-${name}.zip";
+    };
+  };
 }
