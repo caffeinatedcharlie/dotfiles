@@ -3,6 +3,8 @@
   "workbench.iconTheme" = "catppuccin-mocha";
   "editor.smoothScrolling" = true;
   "workbench.list.smoothScrolling" = true;
+  "window.customTitleBarVisibility" = "auto";
+  "window.titleBarStyle" = "custom";
   "files.autoSave" = "onFocusChange";
   "github.gitAuthentication" = false;
   "git.confirmSync" = false;
