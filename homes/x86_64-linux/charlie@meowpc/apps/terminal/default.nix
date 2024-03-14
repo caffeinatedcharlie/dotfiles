@@ -4,6 +4,7 @@
       ./nushell
       ./yazi
       ./helix
+      ./git
     ];
   programs.kitty = {
     enable = true;
