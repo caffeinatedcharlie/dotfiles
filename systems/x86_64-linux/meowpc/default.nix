@@ -15,6 +15,8 @@
       ./services.nix
       # Import users
       ./users
+      # Import display manager configuration
+      ./dm
       # Import desktop configuration
       ./desktop
     ];
