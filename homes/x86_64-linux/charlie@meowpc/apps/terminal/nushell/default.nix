@@ -18,6 +18,7 @@
           " じしf_,)/ "
         ]
         let s = (sys)
+        clear
         print $"(ansi reset)(ansi blue_bold) ($s.host.name) (ansi white_bold)($s.host.os_version)(ansi reset)"
         print $"(ansi yellow_bold) Linux (ansi white_bold)($s.host.kernel_version)(ansi reset)"
         print $""
