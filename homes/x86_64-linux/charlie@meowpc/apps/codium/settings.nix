@@ -13,6 +13,12 @@
   "editor.semanticHighlighting.enabled" = true;
   "editor.fontFamily" = "'Monaspace Neon Regular', 'DejaVu Sans Mono'";
   "terminal.integrated.fontFamily" = "monospace";
+  "rpc.buttonEnabled" = true;
+  "rpc.buttonInactiveLabel" = "";
+  "rpc.buttonInactiveUrl" = "";
+  "rpc.lowerDetailsDebugging" = "Debugging {file_name}:{current_line}:{current_column}";
+  "rpc.detailsDebugging" = "In {workspace} {problems}";
+  "rpc.smallImage" = "Codium";
   "[javascript]" = {
     "editor.defaultFormatter" = "esbenp.prettier-vscode";
   };
