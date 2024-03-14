@@ -1,0 +1,13 @@
+{
+    "conventionalCommits.scopes": [
+        "apps/terminal",
+        "apps/codium",
+        "apps/browser",
+        "hyprland",
+        "modules/nixos",
+        "modules/home",
+        "shell",
+        "system",
+        "dm"
+    ]
+}
