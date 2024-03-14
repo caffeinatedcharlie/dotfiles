@@ -6,4 +6,5 @@
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     xwayland.enable = true;
   };
+  security.polkit.enable = true;
 }
