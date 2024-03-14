@@ -9,7 +9,7 @@
   home.file.".vscode-oss/argv.json" = {
     force = true;
     text = builtins.toJSON {
-      password-store = "gnome";
+      password-store = "gnome-libsecret";
       enable-crash-reporter = false;
       enable-proposed-api = [
         "jeanp413.open-remote-ssh"
