@@ -25,6 +25,10 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    kittypkgs = {
+      url = "git+https://git.catvibers.me/charlie/kittypkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
   };
 
   # We will handle this in the next section.
