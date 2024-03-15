@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports =
@@ -8,17 +8,7 @@
 
   programs.yazi = {
     enable = true;
-    package = pkgs.yazi.override {
-      withFile = true;
-      withJq = true;
-      withPoppler = true;
-      withUnar = true;
-      withFfmpegthumbnailer = true;
-      withFd = true;
-      withRipgrep = true;
-      withFzf = true;
-      withZoxide = true;
-    };
+    package = inputs.kittypkgs.packages.${pkgs.system}.yazi;
     enableNushellIntegration = true;
     settings = {
       manager = {

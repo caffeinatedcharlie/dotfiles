@@ -16,6 +16,5 @@ in
   home.packages = with unstable; [
     swww
     whois
-    exiftool
   ];
 }
