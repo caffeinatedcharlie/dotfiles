@@ -7,8 +7,6 @@ pkgs.writeShellApplication
   runtimeInputs = with pkgs; [ glxinfo ];
 
   text = ''
-    #!/bin/bash
-
     case "$@" in
     	""|"--help"|"-help"|"-h")
     		echo "This script only launches the command you write after.
