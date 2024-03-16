@@ -12,4 +12,5 @@
       theme = "catppuccin-mocha";
     };
   };
+  security.pam.services.sddm.enableGnomeKeyring = true;
 }
