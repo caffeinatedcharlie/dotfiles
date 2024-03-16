@@ -3,7 +3,6 @@
 {
   imports =
     [
-      # ./sddm.nix
-      # ./gdm.nix
+      ./greetd.nix
     ];
 }
