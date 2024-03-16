@@ -12,7 +12,6 @@
       name = "default";
       id = 0;
       extensions = with inputs.firefox-addons.packages.${system}; [
-        firefox-color
         multi-account-containers
         violentmonkey
         ublock-origin
