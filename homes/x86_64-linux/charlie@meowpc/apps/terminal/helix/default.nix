@@ -8,6 +8,7 @@
     enable = true;
     defaultEditor = true;
     settings = {
+      keys = import ./keys.nix;
       editor = {
         bufferline = "multiple";
         auto-save = true;
