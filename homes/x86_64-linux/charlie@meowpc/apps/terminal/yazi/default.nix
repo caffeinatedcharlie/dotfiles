@@ -10,6 +10,7 @@
     enable = true;
     package = inputs.kittypkgs.packages.${pkgs.system}.yazi;
     enableNushellIntegration = true;
+    keymap = import ./binds.nix;
     settings = {
       manager = {
         sort_by = "modified";
