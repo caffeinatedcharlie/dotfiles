@@ -1,11 +1,11 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   home.file.".profile" = {
     executable = true;
     force = true;
     text = ''
-      #!${pkgs.bash}/bin/bash
+      #!${lib.getExe pkgs.bash}
       source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
     '';
   };
