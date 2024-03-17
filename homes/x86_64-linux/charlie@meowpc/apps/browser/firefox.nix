@@ -54,6 +54,8 @@
       settings = {
         "browser.tabs.firefox-view" = false; # Disable Firefox View
         "extensions.pocket.enabled" = false; # Disable Pocket
+        "browser.newtabpage.activity-stream.feeds.topsites" = false; # Disable Shortcuts on home page
+        "browser.toolbars.bookmarks.visibility" = "never"; # Hide bookmark bar
         "browser.newtabpage.activity-stream.feeds.section.topstories" = false; # Disable Pocket recommendations on new tab page
         "signon.rememberSignons" = false; # Do not save passwords in Firefox
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true; # Enable customisation
