@@ -2,6 +2,7 @@
   imports =
     [
       ./nushell
+      ./atuin
       ./yazi
       ./helix
       ./git
