@@ -11,14 +11,15 @@
       ./sound.nix
       # Import configure session variables
       ./variables.nix
-      # Import services
-      ./services.nix
       # Import users
       ./users
       # Import display manager configuration
       ./dm
       # Import desktop configuration
       ./desktop
+      # Global apps and services
+      ./apps
+      ./services
     ];
   virtualisation.vmVariant = {
     services.qemuGuest.enable = true;
