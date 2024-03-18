@@ -1,11 +1,6 @@
 { inputs, pkgs, config, lib, ... }:
 
 {
-  # LSP, see https://github.com/microsoft/vscode/issues/188612 for when I can stop installing these globally
-  home.packages = with pkgs; [
-    nil
-    nixpkgs-fmt
-  ];
   home.file.".vscode-oss/argv.json" = {
     force = true;
     text = builtins.toJSON {
@@ -24,7 +19,7 @@
     enableExtensionUpdateCheck = false;
     # https://github.com/nix-community/home-manager/issues/4394#issuecomment-1712909231
     mutableExtensionsDir = false;
-    userSettings = import ./settings.nix;
+    userSettings = import ./settings.nix { inherit lib pkgs; };
     extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       (lib.me.mkOpenVSXExt {
         publisher = "jeanp413";

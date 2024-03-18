@@ -1,3 +1,5 @@
+{ pkgs, lib, ... }:
+
 {
   "workbench.colorTheme" = "Catppuccin Mocha";
   "workbench.iconTheme" = "catppuccin-mocha";
@@ -19,6 +21,8 @@
   "rpc.lowerDetailsDebugging" = "Debugging {file_name}:{current_line}:{current_column}";
   "rpc.detailsDebugging" = "In {workspace} {problems}";
   "rpc.smallImage" = "Codium";
+  "nix.serverPath" = "${lib.getExe pkgs.nil}";
+  "nix.formatterPath" = "${lib.getExe pkgs.nixpkgs-fmt}";
   "[javascript]" = {
     "editor.defaultFormatter" = "esbenp.prettier-vscode";
   };
