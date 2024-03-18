@@ -26,7 +26,6 @@ builtins.concatLists (builtins.attrValues {
     vivaxy.vscode-conventional-commits
   ];
   code = with extensions; [
-    bierner.emojisense
     esbenp.prettier-vscode
     pkgs.vscode-extensions.github.vscode-pull-request-github
     ultram4rine.vscode-choosealicense
