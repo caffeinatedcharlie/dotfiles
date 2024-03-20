@@ -5,6 +5,7 @@
       ./atuin
       ./yazi
       ./helix
+      ./micro
       ./git
     ];
   programs.kitty = {
