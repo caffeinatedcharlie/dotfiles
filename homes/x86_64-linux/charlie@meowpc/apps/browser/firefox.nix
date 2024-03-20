@@ -61,6 +61,17 @@
         "browser.newtabpage.activity-stream.feeds.section.topstories" = false; # Disable Pocket recommendations on new tab page
         "signon.rememberSignons" = false; # Do not save passwords in Firefox
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true; # Enable customisation
+        "browser.compactmode.show" = true;
+        "browser.uidensity" = 1;
+        "browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts" = false;
+        "browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts.searchEngines" = "";
+        "browser.urlbar.suggest.topsites" = false;
+        "browser.urlbar.suggest.trending" = false;
+        "browser.urlbar.suggest.weather" = false;
+        "browser.urlbar.suggest.yelp" = false;
+        "browser.urlbar.suggest.pocket" = false;
+        "browser.urlbar.suggest.mdn" = false;
+        "browser.urlbar.suggest.engines" = false;
       };
       search = {
         default = "DuckDuckGo";
