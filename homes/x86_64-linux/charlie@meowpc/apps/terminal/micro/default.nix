@@ -2,18 +2,9 @@
   home.sessionVariables = {
     MICRO_TRUECOLOR = 1;
   };
-  programs.micro = {
-    enable = true;
-    settings = {
-      clipboard = "terminal";
-      colorscheme = "catppuccin-mocha";
-    };
-  };
   home.file.".config/micro/colorschemes/catppuccin-mocha.micro" = {
-    executable = true;
     force = true;
     text = ''
-      color-link default "#C6D0F5,#1E1E2E"
       color-link comment "#585B70"
       color-link identifier "#89B4FA"
       color-link identifier.class "#89B4FA"
@@ -46,5 +37,12 @@
       color-link color-column "#313244"
       color-link type.extended "default"
     '';
+  };
+  programs.micro = {
+    enable = true;
+    settings = {
+      clipboard = "terminal";
+      colorscheme = "catppuccin-mocha";
+    };
   };
 }
