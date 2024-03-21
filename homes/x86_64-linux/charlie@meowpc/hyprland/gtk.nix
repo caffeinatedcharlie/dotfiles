@@ -1,6 +1,10 @@
 { pkgs, config, ... }:
 
 {
+  home.packages = with pkgs.gnome; [
+    nautilus
+  ];
+
   gtk = {
     enable = true;
     font = {
