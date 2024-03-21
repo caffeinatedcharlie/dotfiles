@@ -1,6 +1,10 @@
 { pkgs, config, ... }:
 
 {
+  home.packages = with pkgs.kdePackages; [
+    qtwayland
+  ];
+
   qt = {
     enable = true;
     platformTheme = "qtct";
