@@ -1,5 +1,9 @@
-{ inputs, ... }:
-
+{ inputs, system, ... }:
+let
+  unstable = import inputs.nixpkgs-unstable {
+    system = system;
+  };
+in
 {
   nix = {
     # https://nixos.org/manual/nix/stable/command-ref/conf-file.html
@@ -30,5 +34,12 @@
     };
     registry.nixpkgs.flake = inputs.nixpkgs;
     nixPath = [ "nixpkgs=flake:nixpkgs" ];
+  };
+  nixpkgs = {
+    overlays = [
+      (final: prev: {
+        unstable = unstable;
+      })
+    ];
   };
 }

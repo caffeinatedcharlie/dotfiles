@@ -1,10 +1,4 @@
-{ inputs, pkgs, system, lib, ... }:
-let
-  unstable = import inputs.nixpkgs-unstable {
-    system = system;
-    config.allowUnfree = true;
-  };
-in
+{ pkgs, ... }:
 {
   imports =
     [
@@ -13,7 +7,7 @@ in
       ./codium
     ];
 
-  home.packages = with unstable; [
+  home.packages = with pkgs.unstable; [
     swww
     whois
   ];

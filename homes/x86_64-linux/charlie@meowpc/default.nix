@@ -3,6 +3,7 @@
 {
   imports =
     [
+      ./nix.nix
       ./apps
       ./hyprland
       ./env.nix
