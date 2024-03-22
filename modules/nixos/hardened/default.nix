@@ -31,7 +31,7 @@ in
     }
     // lib.mkIf config.programs.virt-manager.enable {
       # https://github.com/NixOS/nixpkgs/issues/223594#issuecomment-1527956398
-      boot.kernelModules = [ "kvm-amd" "evdev" "nf" "nf_nat" "nft_chain_nat" "nf_ct" "xt_conntrack" "nf_conntrack" "xt_CHECKSUM" "xt_MASQUERADE" "ipt_REJECT" "nf_reject_ipv4" "snd_hnd_core" "snd" "udp_diag" "edac_mce_amd" "edac_core" "syscopyarea" "ip6_tables" "vhost" "vhost_net" "vhost_iotlb" "xhci_pci" ];
+      boot.kernelModules = [ "evdev" "nf" "nf_nat" "nft_chain_nat" "nf_ct" "xt_conntrack" "nf_conntrack" "xt_CHECKSUM" "xt_MASQUERADE" "ipt_REJECT" "nf_reject_ipv4" "snd_hnd_core" "snd" "udp_diag" "edac_mce_amd" "edac_core" "syscopyarea" "ip6_tables" "vhost" "vhost_net" "vhost_iotlb" "xhci_pci" ];
     }
   );
 }
