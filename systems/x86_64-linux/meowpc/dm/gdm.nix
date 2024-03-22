@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   services.xserver = {
@@ -6,7 +6,7 @@
     displayManager.gdm = {
       enable = true;
       wayland = true;
-      banner = '':3 is so cool'';
+      banner = '':3'';
     };
   };
   security.pam.services.gdm.enableGnomeKeyring = true;
