@@ -5,6 +5,7 @@
     [
       ./nix.nix
       ./apps
+      ./utility
       ./hyprland
       ./env.nix
     ];
