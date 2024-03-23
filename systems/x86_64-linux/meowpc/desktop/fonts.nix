@@ -13,9 +13,11 @@
       })
     ];
     fontDir.enable = true;
-    fontconfig.defaultFonts = {
-      sansSerif = [ "Inter Variable" "Inter Variable Regular" "Inter" "Inter Regular" "Cantarell" "DejaVu Sans" ];
-      monospace = [ "Monaspice Nerd Font" "Monaspace Neon Var" "Monaspace Neon Regular" "DejaVu Sans Mono" ];
+    fontconfig = {
+      defaultFonts = {
+        sansSerif = [ "Inter Variable" "Inter Variable Regular" "Inter" "Inter Regular" "Cantarell" "DejaVu Sans" ];
+        monospace = [ "MonaspiceNe Nerd Font" "Monaspace Neon Var" "Monaspace Neon Regular" "DejaVu Sans Mono" ];
+      };
     };
   };
 }

@@ -13,8 +13,7 @@
   "git.autofetch" = true;
   "editor.formatOnSave" = true;
   "editor.semanticHighlighting.enabled" = true;
-  "editor.fontFamily" = "'Monaspace Neon Regular', 'DejaVu Sans Mono'";
-  "terminal.integrated.fontFamily" = "monospace";
+  "editor.fontFamily" = "'MonaspiceNe Nerd Font', 'DejaVu Sans Mono'";
   "rpc.buttonEnabled" = true;
   "rpc.buttonInactiveLabel" = "";
   "rpc.buttonInactiveUrl" = "";
