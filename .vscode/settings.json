@@ -9,6 +9,8 @@
         "shell",
         "system",
         "dm",
-        "utility"
+        "utility",
+        "apps/chat",
+        "apps"
     ]
 }

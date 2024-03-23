@@ -1,14 +1,10 @@
-{ pkgs, ... }:
 {
   imports =
     [
       ./terminal
       ./browser
       ./codium
+      ./chat
+      ./packages.nix
     ];
-
-  home.packages = with pkgs.unstable; [
-    swww
-    whois
-  ];
 }
