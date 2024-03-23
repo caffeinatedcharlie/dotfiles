@@ -1,16 +1,17 @@
 {
-    "conventionalCommits.scopes": [
-        "apps/terminal",
-        "apps/codium",
-        "apps/browser",
-        "hyprland",
-        "modules/nixos",
-        "modules/home",
-        "shell",
-        "system",
-        "dm",
-        "utility",
-        "apps/chat",
-        "apps"
-    ]
+  "conventionalCommits.scopes": [
+    "apps/terminal",
+    "apps/codium",
+    "apps/browser",
+    "hyprland",
+    "modules/nixos",
+    "modules/home",
+    "shell",
+    "system",
+    "dm",
+    "utility",
+    "apps/chat",
+    "apps",
+    "packages"
+  ]
 }

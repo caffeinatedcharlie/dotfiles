@@ -1,4 +1,4 @@
-{ lib, inputs, pkgs, stdenv, ... }:
+{ pkgs, ... }:
 
 pkgs.writeShellApplication {
   name = "nvidia-offload";
