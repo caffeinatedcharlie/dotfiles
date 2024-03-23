@@ -8,6 +8,7 @@
         "modules/home",
         "shell",
         "system",
-        "dm"
+        "dm",
+        "utility"
     ]
 }
