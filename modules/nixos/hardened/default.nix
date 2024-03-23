@@ -1,5 +1,4 @@
 { config, modulesPath, lib, pkgs, ... }:
-
 let
   cfg = config.security;
 in

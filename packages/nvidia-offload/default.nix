@@ -1,7 +1,6 @@
 { lib, inputs, pkgs, stdenv, ... }:
 
-pkgs.writeShellApplication
-{
+pkgs.writeShellApplication {
   name = "nvidia-offload";
 
   runtimeInputs = with pkgs; [ glxinfo ];

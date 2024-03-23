@@ -1,4 +1,6 @@
-{ lib }: {
+{ lib }:
+
+{
   patchOutput = old: cmd: old.stdenv.mkDerivation {
     name = "${old.name}-overridden";
 
