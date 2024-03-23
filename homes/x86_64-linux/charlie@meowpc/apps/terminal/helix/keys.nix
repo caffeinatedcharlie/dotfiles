@@ -1,6 +1,6 @@
 {
   normal = {
-    C-c = ":qa!";
+    C-q = ":qa!";
     C-s = ":w";
     C-S-s = ":wqa!";
   };
