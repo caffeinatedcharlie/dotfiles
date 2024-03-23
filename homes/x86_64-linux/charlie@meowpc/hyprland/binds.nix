@@ -6,6 +6,10 @@ let
   launchModS = "ALT_SHIFT";
 in
 [
+  # Applications
   "${launchMod}, T, exec, kitty"
   "${launchMod}, Q, exec, firefox"
+
+  # Screenshot
+  ", Print, exec, sh ${./scripts/screenshot.sh}"
 ]
