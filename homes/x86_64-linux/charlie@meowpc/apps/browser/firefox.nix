@@ -72,13 +72,6 @@
         "browser.urlbar.suggest.mdn" = false;
         "browser.urlbar.suggest.engines" = false;
       };
-      search = {
-        default = "DuckDuckGo";
-        engines = {
-          "eBay".metaData.hidden = true;
-        };
-        privateDefault = "DuckDuckGo";
-      };
       userChrome = ''
         .titlebar-buttonbox {
             display: none !important;
