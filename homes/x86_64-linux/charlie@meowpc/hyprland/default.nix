@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, lib, ... }:
 
 {
   imports =
@@ -73,11 +73,12 @@
         # Variable Refresh Rate
         vrr = 1;
       };
-      exec = import ./exec.nix;
-      bind = import ./binds.nix;
+      exec = import ./exec.nix { inherit pkgs lib; };
+      bind = import ./binds.nix { inherit pkgs lib; };
       bindm = [
         # Move/resize windows with mainMod + LMB/RMB and dragging
         "SUPER, mouse:272, movewindow"
+        "SUPER_ALT, mouse:272, resizewindow"
         "SUPER, mouse:273, resizewindow"
       ];
       # windowrulev2 = import ./rules.nix;

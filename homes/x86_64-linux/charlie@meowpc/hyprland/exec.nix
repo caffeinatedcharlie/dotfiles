@@ -1,4 +1,6 @@
+{ pkgs, lib, ... }:
+
 [
-  "wl-clip-persist --clipboard both"
-  "swww init && swww img ${./wallpapers/oneshot.png}"
+  "${lib.getExe pkgs.wl-clip-persist} --clipboard both"
+  "${lib.getExe pkgs.swww} init && ${lib.getExe pkgs.swww} img ${./wallpapers/oneshot.png}"
 ]
