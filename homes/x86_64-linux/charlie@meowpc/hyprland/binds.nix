@@ -12,7 +12,17 @@ in
   # Launcher
   "${mainMod}, D, exec, ${lib.getExe pkgs.wofi} --show drun"
 
+  # Active window state controls
+
+  "${mainMod}, W, killactive,"
+  "${mainMod}, O, pseudo," # dwindle
+  "${mainMod}, A, togglesplit," # dwindle
+  "${mainMod}, S, pin,"
+  "${mainMod}, F, fullscreen"
+  "${mainMod}, R, swapactiveworkspaces,"
+
   # Applications
+
   "${launchMod}, T, exec, ${lib.getExe pkgs.kitty}"
   "${launchMod}, Q, exec, ${lib.getExe pkgs.firefox}"
   "${launchMod}, C, exec, ${lib.getExe pkgs.vscodium}"
@@ -20,10 +30,12 @@ in
   "${launchMod}, D, exec, ${lib.getExe pkgs.vesktop}"
 
   # Screenshot
+
   ", Print, exec, ${lib.getExe (pkgs.callPackage ./scripts/screenshot.nix {})}"
   "${mainMod}, Print, exec, ${lib.getExe (pkgs.callPackage ./scripts/screenshot-window.nix {})}"
 
   # Color picker
+
   "${ctrlModS}, I, exec, ${lib.getExe pkgs.hyprpicker} -n -r -a"
 
   # Movement controls
