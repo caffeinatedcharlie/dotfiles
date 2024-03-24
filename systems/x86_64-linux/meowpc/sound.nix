@@ -1,6 +1,9 @@
-{ lib, modulesPath, ... }:
+{ pkgs, lib, modulesPath, ... }:
 
 {
+  environment.systemPackages = with pkgs; [
+    pulseaudio
+  ];
   sound.enable = true;
   security.rtkit.enable = true;
   services.pipewire = {
