@@ -14,7 +14,6 @@ in
         "flakes"
         "nix-command"
       ];
-      use-xdg-base-directories = false; # Some bug makes $PATH not update to the new directories so for now I'm disabling this
       auto-optimise-store = true;
       log-lines = 10000000;
       substituters = [
