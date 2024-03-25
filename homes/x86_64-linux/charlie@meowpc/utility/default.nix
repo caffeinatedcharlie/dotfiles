@@ -5,6 +5,5 @@
       ./hyprpicker
       ./pavucontrol
       ./screenshot
-      ./looking-glass
     ];
 }
