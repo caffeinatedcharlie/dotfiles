@@ -1,7 +1,6 @@
 {
   programs.atuin = {
     enable = true;
-    enableNushellIntegration = true;
     settings = {
       dialect = "uk";
       style = "compact";

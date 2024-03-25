@@ -7,5 +7,6 @@
   ];
 
   users.mutableUsers = false;
-  environment.shells = with pkgs; [ nushell ];
+  environment.shells = with pkgs; [ zsh ];
+  programs.zsh.enable = true;
 }

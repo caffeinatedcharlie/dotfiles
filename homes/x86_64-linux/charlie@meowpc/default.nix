@@ -7,7 +7,7 @@
       ./apps
       ./utility
       ./hyprland
-      ./env.nix
+      # ./env.nix
     ];
 
   programs.nix-index-database.comma.enable = true;

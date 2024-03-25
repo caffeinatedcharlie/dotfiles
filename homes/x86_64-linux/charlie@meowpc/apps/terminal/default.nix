@@ -1,6 +1,7 @@
 {
   imports =
     [
+      ./zsh
       ./nushell
       ./atuin
       ./yazi
