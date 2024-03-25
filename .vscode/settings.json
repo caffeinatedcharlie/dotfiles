@@ -13,6 +13,7 @@
     "apps/chat",
     "apps",
     "packages",
-    "users"
+    "users",
+    "services"
   ]
 }

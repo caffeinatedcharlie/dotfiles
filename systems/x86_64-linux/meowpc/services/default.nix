@@ -3,7 +3,7 @@
     ./flatpak
     ./podman
     ./gnome-keyring
-    ./udisks2
+    ./disks
     ./gpg
   ];
 }
