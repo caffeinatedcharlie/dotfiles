@@ -56,7 +56,7 @@
 
     # Enable the Nvidia settings menu,
     # accessible via `nvidia-settings`.
-    # nvidiaSettings = true;
+    nvidiaSettings = false; # me when wayland
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.stable;
@@ -66,27 +66,31 @@
 
   # Filesystems
 
-  # services.fstrim.enable = true;
+  services.fstrim.enable = true;
   boot.supportedFilesystems = [ "bcachefs" "ext4" "btrfs" "vfat" "ntfs" ];
 
-  # boot.initrd.luks.devices."luks-8cf2d39e-ba59-4190-8f21-07123bd185ba".device = "/dev/disk/by-uuid/8cf2d39e-ba59-4190-8f21-07123bd185ba";
+  fileSystems."/" =
+    {
+      device = "/dev/disk/by-uuid/db57de03-3486-48d8-8018-c3d4b309c10f";
+      fsType = "bcachefs";
+    };
 
-  # fileSystems."/" =
+  fileSystems."/boot" =
+    {
+      device = "/dev/disk/by-uuid/27DC-6307";
+      fsType = "vfat";
+    };
+
+  # Me when they fail to mount this partition for seemingly no reason at all :sob:
+
+  # fileSystems."/home" =
   #   {
-  #     device = "/dev/disk/by-uuid/ce73ccac-73b5-4fd2-a78e-33e5ae571757";
-  #     fsType = "ext4";
+  #     device = "/dev/disk/by-partuuid/fdc75711-559a-4908-9eda-5a912a6440b4:/dev/disk/by-partuuid/8209bc50-fb37-432c-b137-13d97ad65478:/dev/disk/by-partuuid/3ddfb494-022b-44c9-9f3e-e13c7985b847";
+  #     fsType = "bcachefs";
   #   };
 
-  # boot.initrd.luks.devices."luks-d10d2627-7922-4c1d-a488-125c142dffd6".device = "/dev/disk/by-uuid/d10d2627-7922-4c1d-a488-125c142dffd6";
-
-  # fileSystems."/boot" =
-  #   {
-  #     device = "/dev/disk/by-uuid/8CF8-90A0";
-  #     fsType = "vfat";
-  #   };
-
-  # swapDevices =
-  #   [{ device = "/dev/disk/by-uuid/297a4e94-5be3-464f-8810-6c59a9ad6d32"; }];
+  swapDevices =
+    [{ device = "/dev/disk/by-uuid/40b6fb4e-efa4-4203-bcf5-0d9a4bb1b257"; }];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
