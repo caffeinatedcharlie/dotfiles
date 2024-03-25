@@ -1,4 +1,6 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+
+{
   programs.gpg = {
     enable = true;
     settings = {
@@ -14,5 +16,4 @@
     enableSshSupport = true;
     pinentryFlavor = "gnome3";
   };
-  programs.ssh.enable = true;
 }
