@@ -13,7 +13,9 @@
       id = 0;
       extensions = with inputs.firefox-addons.packages.${system}; [
         multi-account-containers
+        firefox-color
         violentmonkey
+        stylus
         ublock-origin
         ublacklist
         darkreader
