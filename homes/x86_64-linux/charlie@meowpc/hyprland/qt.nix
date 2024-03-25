@@ -1,15 +1,18 @@
 { pkgs, config, ... }:
 
 {
-  home.packages = with pkgs.kdePackages; [
-    qtwayland
+  home.packages = with pkgs; [
+    breeze-icons
+    libsForQt5.plasma-integration
+    libsForQt5.systemsettings
+    kdePackages.qtwayland
   ];
-
   qt = {
     enable = true;
-    platformTheme = "qtct";
+    platformTheme = "kde";
     style = {
       name = "kvantum";
+      package = with pkgs; [ libsForQt5.qtstyleplugin-kvantum qt6Packages.qtstyleplugin-kvantum gnome.adwaita-icon-theme ];
     };
   };
 
