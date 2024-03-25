@@ -12,6 +12,7 @@
     "utility",
     "apps/chat",
     "apps",
-    "packages"
+    "packages",
+    "users"
   ]
 }
