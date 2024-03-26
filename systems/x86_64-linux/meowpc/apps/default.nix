@@ -1,5 +1,5 @@
 {
   imports = [
-    ./virt-manager
+    ./utility
   ];
 }
