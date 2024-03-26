@@ -1,0 +1,65 @@
+From 584c19055d99b248100bc47967fdfc3237a7906c Mon Sep 17 00:00:00 2001
+From: caffeinatedcharlie <git@downgraded.uk>
+Date: Mon, 25 Mar 2024 15:16:44 +0000
+Subject: [PATCH] fix: :bug: memtype_reserve failed -16
+
+---
+ arch/x86/mm/pat/memtype_interval.c | 31 +++++++++++++++++++++---------
+ 1 file changed, 22 insertions(+), 9 deletions(-)
+
+diff --git a/arch/x86/mm/pat/memtype_interval.c b/arch/x86/mm/pat/memtype_interval.c
+index 645613d59942..af87c50d45c1 100644
+--- a/arch/x86/mm/pat/memtype_interval.c
++++ b/arch/x86/mm/pat/memtype_interval.c
+@@ -33,6 +33,16 @@
+  * memtype_lock protects the rbtree.
+  */
+ 
++int skip_pat_enable = 0;
++
++static int __init skip_pat_check(char *str)
++{
++	skip_pat_enable = 1;
++	pr_info("Disabled PAT check type (experimental)\n");
++	return 0;
++}
++early_param("skippatcheck", skip_pat_check);
++
+ static inline u64 interval_start(struct memtype *entry)
+ {
+ 	return entry->start;
+@@ -86,19 +96,22 @@ static int memtype_check_conflict(u64 start, u64 end,
+ 	if (entry_match == NULL)
+ 		goto success;
+ 
+-	if (entry_match->type != found_type && newtype == NULL)
+-		goto failure;
+-
+-	dprintk("Overlap at 0x%Lx-0x%Lx\n", entry_match->start, entry_match->end);
+-	found_type = entry_match->type;
+-
+-	entry_match = interval_iter_next(entry_match, start, end-1);
+-	while (entry_match) {
+-		if (entry_match->type != found_type)
++	if (!skip_pat_enable) {
++		if (entry_match->type != found_type && newtype == NULL)
+ 			goto failure;
+ 
++		dprintk("Overlap at 0x%Lx-0x%Lx\n", entry_match->start, entry_match->end);
++		found_type = entry_match->type;
++
+ 		entry_match = interval_iter_next(entry_match, start, end-1);
++		while (entry_match) {
++			if (entry_match->type != found_type)
++				goto failure;
++
++			entry_match = interval_iter_next(entry_match, start, end-1);
++		}
+ 	}
++
+ success:
+ 	if (newtype)
+ 		*newtype = found_type;
+-- 
+2.44.0
+

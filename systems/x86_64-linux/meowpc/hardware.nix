@@ -7,12 +7,18 @@
     ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPatches = [
+    {
+      name = "skippatcheck";
+      patch = "${./pat.patch}";
+    }
+  ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
-  boot.kernelParams = [ "amd_iommu=on" ];
-  boot.extraModulePackages = with config.boot.kernelPackages; [ kvmfr ];
+  boot.kernelParams = [ "amd_iommu=on" "skippatcheck" ];
+  boot.extraModulePackages = with config.boot.kernelPackages; [ ];
   services.xserver.videoDrivers = [ "nvidia" ];
 
   zramSwap.enable = true;
