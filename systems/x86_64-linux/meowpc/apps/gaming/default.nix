@@ -1,0 +1,8 @@
+{
+  imports =
+    [
+      ./gamemode
+      ./gamescope
+      ./steam
+    ];
+}

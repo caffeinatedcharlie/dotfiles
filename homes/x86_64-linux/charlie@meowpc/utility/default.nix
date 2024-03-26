@@ -5,5 +5,6 @@
       ./hyprpicker
       ./pavucontrol
       ./screenshot
+      ./mangohud
     ];
 }
