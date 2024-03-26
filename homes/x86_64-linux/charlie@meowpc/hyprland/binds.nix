@@ -9,6 +9,9 @@ let
   ctrlModS = "CTRL_SHIFT";
 in
 [
+  # Split screen window bind
+  "${mainModS}, M, exec, hyprctl keyword monitor DP-1,2560x1440@165,0x0,1"
+
   # Launcher
   "${mainMod}, D, exec, ${lib.getExe pkgs.wofi} --show drun"
 
