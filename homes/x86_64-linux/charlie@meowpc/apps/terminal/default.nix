@@ -4,7 +4,6 @@
       ./zsh
       ./nushell
       ./atuin
-      ./yazi
       ./helix
       ./micro
       ./git
