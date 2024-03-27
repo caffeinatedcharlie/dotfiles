@@ -7,6 +7,7 @@
       ./apps
       ./utility
       ./hyprland
+      ./mime.nix
       # ./env.nix
     ];
 
