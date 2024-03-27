@@ -5,7 +5,9 @@
     inputs.self.packages.${pkgs.system}.nvidia-offload
     inputs.self.packages.${pkgs.system}.nvidia-unload
     inputs.self.packages.${pkgs.system}.nvidia-load
+    mpv
     swww
     whois
+    nextcloud-client
   ];
 }
